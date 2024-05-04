@@ -393,9 +393,9 @@ header .colorlib-navbar-brand img {
   /* border-radius: 10px; */
   transition: 0.3s;
 }
-header .colorlib-navbar-brand img:hover {
+/* header .colorlib-navbar-brand img:hover {
   transform: scale(1.5);
-}
+} */
 
 /* colorlib-navbar-brand */
 header .colorlib-navbar-brand .colorlib-logo {
