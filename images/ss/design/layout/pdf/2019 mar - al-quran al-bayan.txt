@@ -1,0 +1,11 @@
+Al-fatihah di kanan.
+garis dibawah ayat di hapus.
+tanda di samping frame di geser kedalam garis frame.
+Setiap 1 BARIS di awal juz, di kasih box warna.
+ukuran == asy-Syifaa' == 210 mm x 295 mm
+
+
+master align horizontal center --> align to page
+-->  yg kiri(master) panah ke kiri 1x.
+khat align horizontal center --> align to page
+--> yg genap panah ke kiri 1x.
