@@ -1686,3 +1686,38 @@ input[type="text"] {
 .js .animate-box {
   opacity: 0;
 }
+
+/* Floating button */
+.floating-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3cb043;
+  color: white;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* Hover effect */
+.floating-icon:hover {
+  background-color: #ffffff;
+  transform: translateY(-5px);
+}
+
+.floating-icon:hover {
+  color: #14661a;
+}
+
+/* Icon styling */
+.floating-icon i {
+  font-size: 28px;
+}
