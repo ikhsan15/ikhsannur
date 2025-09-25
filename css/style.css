@@ -1448,7 +1448,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 20px;
   height: 2px;
   color: #000;

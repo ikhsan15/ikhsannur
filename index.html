@@ -62,7 +62,8 @@
       href="https://ikhsan-nur.iory.my.id/css/magnific-popup.css"
     />
 
-    <link rel="stylesheet" href="https://ikhsan-nur.iory.my.id/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/switching-tab.css" />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -293,12 +294,28 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-12">
-                  <div class="desc">
+            <div class="col-md-12" style="top: -100px">
+              <!-- pindahkan disini -->
+              <div class="popup animate-box">
+                <input type="radio" id="tab1" name="tab" checked />
+                <input type="radio" id="tab2" name="tab" />
+                <input type="radio" id="tab3" name="tab" />
+
+                <div class="tabs">
+                  <label for="tab1">Gema Insani (IT)</label>
+                  <label for="tab2">Gema Insani (Design)</label>
+                  <label for="tab3">Pesantren TIK</label>
+
+                  <div class="marker">
+                    <div id="top"></div>
+                    <div id="bottom"></div>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <div class="panel panel1">
+                    <h2>Gema Insani Press</h2>
                     <p>
-                      <b>Gema Insani Press</b><br />
                       <i>IT Staff | 2019 - Now | Depok, West Java</i>
                     </p>
                     <div class="list-detail">
@@ -338,15 +355,9 @@
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-12">
-                  <div class="desc">
+                  <div class="panel panel2">
+                    <h2>Gema Insani Press</h2>
                     <p>
-                      <b>Gema Insani Press</b><br />
                       <i
                         >Layout Designer Staff | 2018 - 2019 | Depok, West
                         Java</i
@@ -360,20 +371,12 @@
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-12">
-                  <div class="desc">
+                  <div class="panel panel3">
+                    <h2>
+                      Pesantren Teknologi Informasi dan Komunikasi (PeTIK)
+                    </h2>
                     <p>
-                      <b>Pesantren Teknologi Informasi dan Komunikasi (PeTIK)</b
-                      ><br />
-                      <i
-                        >Assistant Instructor | 2017 - 2018 | Depok, West
-                        Java</i
-                      >
+                      <i>IT Staff | 2019 - Now | Depok, West Java</i>
                     </p>
                     <div class="list-detail">
                       <p>
@@ -389,6 +392,7 @@
                   </div>
                 </div>
               </div>
+              <!-- end popup -->
             </div>
           </div>
         </div>
