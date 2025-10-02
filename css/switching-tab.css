@@ -16,13 +16,6 @@ input[type="radio"] {
   display: none;
 }
 
-label:hover,
-#tab1:checked ~ .tabs label[for="tab1"],
-#tab2:checked ~ .tabs label[for="tab2"],
-#tab3:checked ~ .tabs label[for="tab3"] {
-  opacity: 1;
-}
-
 .popup {
   width: 90%;
   height: 480px;
@@ -84,30 +77,6 @@ label:hover,
   transform: scaleY(0); /* default: tidak menutup */
 }
 
-/* TAB 1 aktif → bottom cover 2 tab bawah */
-#tab1:checked ~ .tabs .marker #top {
-  transform: scaleY(0);
-}
-#tab1:checked ~ .tabs .marker #bottom {
-  transform: scaleY(1);
-}
-
-/* TAB 2 aktif → top cover 1 tab, bottom cover 1 tab */
-#tab2:checked ~ .tabs .marker #top {
-  transform: scaleY(0.5); /* cover 1/3 dari tinggi marker */
-}
-#tab2:checked ~ .tabs .marker #bottom {
-  transform: scaleY(0.5);
-}
-
-/* TAB 3 aktif → top cover 2 tab atas */
-#tab3:checked ~ .tabs .marker #top {
-  transform: scaleY(1);
-}
-#tab3:checked ~ .tabs .marker #bottom {
-  transform: scaleY(0);
-}
-
 .content {
   flex: 1;
   padding: 28px;
@@ -119,12 +88,6 @@ label:hover,
 .content .panel {
   display: none;
   background-color: #dfe6ed;
-}
-
-#tab1:checked ~ .content .panel1,
-#tab2:checked ~ .content .panel2,
-#tab3:checked ~ .content .panel3 {
-  display: block;
 }
 
 .panel h2 {
@@ -174,4 +137,89 @@ label:hover,
   border-top: 5px solid transparent; /* sisi atas transparan */
   border-bottom: 5px solid transparent; /* sisi bawah transparan */
   border-left: 8px solid #394550; /* segitiga menunjuk ke kanan (ke arah teks) */
+}
+
+/* === LABEL SELECTED STATE === */
+label:hover,
+#tab1:checked ~ .tabs label[for="tab1"],
+#tab2:checked ~ .tabs label[for="tab2"],
+#tab3:checked ~ .tabs label[for="tab3"],
+#tab1-2:checked ~ .tabs label[for="tab1-2"],
+#tab2-2:checked ~ .tabs label[for="tab2-2"],
+#tab3-2:checked ~ .tabs label[for="tab3-2"],
+#tab4-2:checked ~ .tabs label[for="tab4-2"] {
+  opacity: 1;
+}
+
+/* === MARKER UNTUK 3 TAB === */
+/* tab1 aktif → cover 2 tab bawah */
+#tab1:checked ~ .tabs .marker #top {
+  transform: scaleY(0);
+}
+#tab1:checked ~ .tabs .marker #bottom {
+  transform: scaleY(1);
+}
+
+/* tab2 aktif → cover 1 atas + 1 bawah */
+#tab2:checked ~ .tabs .marker #top {
+  transform: scaleY(0.5);
+}
+#tab2:checked ~ .tabs .marker #bottom {
+  transform: scaleY(0.5);
+}
+
+/* tab3 aktif → cover 2 atas */
+#tab3:checked ~ .tabs .marker #top {
+  transform: scaleY(1);
+}
+#tab3:checked ~ .tabs .marker #bottom {
+  transform: scaleY(0);
+}
+
+/* tampilkan panel (3 tab) */
+#tab1:checked ~ .content .panel1,
+#tab2:checked ~ .content .panel2,
+#tab3:checked ~ .content .panel3 {
+  display: block;
+}
+
+/* === MARKER UNTUK 4 TAB (INSTANCE KEDUA) === */
+/* tab1-2 aktif → cover 3 tab bawah */
+#tab1-2:checked ~ .tabs .marker #top {
+  transform: scaleY(0);
+}
+#tab1-2:checked ~ .tabs .marker #bottom {
+  transform: scaleY(1.1);
+}
+
+/* tab2-2 aktif → cover 1 atas + 2 bawah */
+#tab2-2:checked ~ .tabs .marker #top {
+  transform: scaleY(0.4);
+}
+#tab2-2:checked ~ .tabs .marker #bottom {
+  transform: scaleY(0.7);
+}
+
+/* tab3-2 aktif → cover 2 atas + 1 bawah */
+#tab3-2:checked ~ .tabs .marker #top {
+  transform: scaleY(0.8);
+}
+#tab3-2:checked ~ .tabs .marker #bottom {
+  transform: scaleY(0.25);
+}
+
+/* tab4-2 aktif → cover 3 atas */
+#tab4-2:checked ~ .tabs .marker #top {
+  transform: scaleY(1.25);
+}
+#tab4-2:checked ~ .tabs .marker #bottom {
+  transform: scaleY(0);
+}
+
+/* tampilkan panel (4 tab) */
+#tab1-2:checked ~ .content .panel1-2,
+#tab2-2:checked ~ .content .panel2-2,
+#tab3-2:checked ~ .content .panel3-2,
+#tab4-2:checked ~ .content .panel4-2 {
+  display: block;
 }
