@@ -442,7 +442,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 #colorlib-progress,
 #colorlib-contact,
 #colorlib-about {
-  padding: 10em 0;
+  padding: 10em 0 5em 0;
   clear: both;
   position: relative;
 }
